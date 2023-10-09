@@ -4,10 +4,10 @@ import Container from "./Container.vue"
 </script>
 
 <template>
-    <ALayoutHeader>
+    <a-layout-header>
         <Container>
             <RouterLink to="/">Instagram</RouterLink>
         </Container>
       
-    </ALayoutHeader>
+    </a-layout-header>
 </template>

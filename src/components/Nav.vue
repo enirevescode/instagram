@@ -12,7 +12,7 @@ const onSearch = () => {}
 
 <template>
     <a-layout-header>
-        <container>
+        <ContainerNav>
           <div class="nav-container">
             <div class="right-content">
                 <RouterLink to="/">Instagram</RouterLink>
@@ -33,7 +33,7 @@ const onSearch = () => {}
                
             </div>
           </div>
-        </container>
+        </ContainerNav>
       
     </a-layout-header>
 </template>

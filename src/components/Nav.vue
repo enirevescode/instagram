@@ -1,6 +1,7 @@
 <script setup>
 import {RouterLink} from 'vue-router'
-import Container from "./Container.vue"
+import ContainerNav from "./ContainerNav.vue"
+import AuthModal from './AuthModal.vue';
 import { ref } from 'vue';
 
 const searchUserName = ref("")
@@ -9,23 +10,23 @@ const onSearch = () => {}
 
 <template>
     <a-layout-header>
-        <Container>
+        <container>
           <div class="nav-container">
             <div class="right-content">
                 <RouterLink to="/">Instagram</RouterLink>
-            <a-input-search
-                v-model:value="searchUserName"
-                placeholder="User Name..."
-                style="width: 200px"
-                @search="onSearch"
-            />
+                    <a-input-search
+                        v-model:value="searchUserName"
+                        placeholder="User Name..."
+                        style="width: 200px"
+                        @search="onSearch"
+                    />
             </div>
             <div class="left-content">
-                <a-button type="primary">Signup</a-button>
-                <a-button type="primary">Login</a-button>
+                <AuthModal :isLogin="false"/>
+                <AuthModal :isLogin="true"/>
             </div>
           </div>
-        </Container>
+        </container>
       
     </a-layout-header>
 </template>
@@ -38,11 +39,17 @@ const onSearch = () => {}
 .right-content {
     display: flex;
     align-items: center;
+    
 }
 .right-content a {
     margin-right: 10px;
+    text-decoration: none;
 }
 
+.left-content{
+    display: flex;
+    align-items: center;
+}
 .left-content button {
 margin-left: 10px;
 }

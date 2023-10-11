@@ -8,7 +8,7 @@ const props = defineProps(['posts'])
         <img
         v-for="post in props.posts"
         :src="post.image" 
-        :alt="pro"
+        :alt="post.alt"
         :key="post.id"/>
     </div>
 </template>

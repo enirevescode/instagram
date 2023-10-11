@@ -9,7 +9,7 @@ import ImageGallery from './ImageGallery.vue';
     <ContainerNav>
         <div class="profile-container">
             <UserBar
-            username="luke bracey"
+            username="Mon profile"
             :userInfo="{
                 posts: 4,
                 followers: 250,
@@ -17,7 +17,18 @@ import ImageGallery from './ImageGallery.vue';
             }"
             
             />
-            <ImageGallery/>
+            <ImageGallery
+            :posts="[{
+                id:1,
+                image:'https://lemagdesanimaux.ouest-france.fr/images/dossiers/2019-09/mini/loutre-1-085218-650-400.jpg',
+                alt: '1 loutre'
+            },
+            {
+                id:2,
+                image:'https://static.actu.fr/uploads/2020/02/loutre-peter-trimming-01-libre-de-droit-960x640.jpg',
+                alt: 'moi 2 loutre'
+            }
+            ]"/>
         </div>
        
     </ContainerNav>

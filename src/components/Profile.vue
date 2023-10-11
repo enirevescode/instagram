@@ -1,6 +1,7 @@
 <script setup>
 import ContainerNav from './ContainerNav.vue';
 import UserBar from './UserBar.vue';
+import ImageGallery from './ImageGallery.vue';
 
 </script>
 
@@ -16,7 +17,7 @@ import UserBar from './UserBar.vue';
             }"
             
             />
-            <h1>IMAGES GALLERY</h1>
+            <ImageGallery/>
         </div>
        
     </ContainerNav>

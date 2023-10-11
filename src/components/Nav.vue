@@ -27,7 +27,7 @@ const onSearch = () => {
                 <RouterLink to="/">Instagram</RouterLink>
                     <a-input-search
                         v-model:value="searchUsername"
-                        placeholder="User Name..."
+                        placeholder="Username ..."
                         style="width: 200px"
                         @search="onSearch"
                     />

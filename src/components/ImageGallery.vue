@@ -5,7 +5,11 @@ const props = defineProps(['posts'])
 </script>
 <template>
     <div class="image-gallery-container">
-        <img src="" alt=""/>
+        <img
+        v-for="post in props.posts"
+        :src="post.image" 
+        :alt="pro"
+        :key="post.id"/>
     </div>
 </template>
 <style scoped>

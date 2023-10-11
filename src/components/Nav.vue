@@ -1,13 +1,22 @@
 <script setup>
-import {RouterLink} from 'vue-router'
+import {RouterLink, useRouter} from 'vue-router'
 import ContainerNav from "./ContainerNav.vue"
 import AuthModal from './AuthModal.vue';
 import { ref } from 'vue';
 
-const searchUserName = ref("")
+const searchUsername = ref("")
 const isAuthenticated = ref(false)
+const router = useRouter()
 
-const onSearch = () => {}
+//Mise en place de la recherche de profile d'utilisateur
+//avec maj du path & du username
+const onSearch = () => {
+    if(searchUsername.value){
+        router.push(`/profile/${searchUsername.value}`)
+        //clear the path
+        searchUsername.value = ""
+    }
+}
 </script>
 
 <template>
@@ -17,8 +26,8 @@ const onSearch = () => {}
             <div class="right-content">
                 <RouterLink to="/">Instagram</RouterLink>
                     <a-input-search
-                        v-model:value="searchUserName"
-                        placeholder="User Name..."
+                        v-model:value="searchUsername"
+                        placeholder="Username ..."
                         style="width: 200px"
                         @search="onSearch"
                     />

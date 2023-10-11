@@ -1,12 +1,21 @@
 <script setup>
 import ContainerNav from './ContainerNav.vue';
+import UserBar from './UserBar.vue';
 
 </script>
 
 <template>
     <ContainerNav>
         <div class="profile-container">
-            <h1>USERBAR</h1>
+            <UserBar
+            username="luke bracey"
+            :userInfo="{
+                posts: 4,
+                followers: 250,
+                following:10
+            }"
+            
+            />
             <h1>IMAGES GALLERY</h1>
         </div>
        

@@ -27,7 +27,7 @@ export const useUserStore = defineStore('users', () => {
       if(!validateEmail(email)){
         return errorMessage.value = "Le mail n'est pas valide"
       }
-      errorMessage.value =""
+      errorMessage.value ="";
   }
 //gestion déconnexion
   const handleLogout = () =>{

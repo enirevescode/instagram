@@ -7,15 +7,15 @@ import ImageGallery from './ImageGallery.vue';
 
 <template>
     <ContainerNav>
-        <div class="profile-container">
+        <div class="profile-container"><!-- Comment rend le chgt de path réactif :key="$route.params.username"-->
             <UserBar
-            username="Mon profile"
+            :key="$route.params.username"
+            username="Jean-François"
             :userInfo="{
                 posts: 4,
                 followers: 250,
                 following:10
             }"
-            
             />
             <ImageGallery
             :posts="[{
